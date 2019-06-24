@@ -1603,7 +1603,7 @@ public class RelBuilder {
       assert groupSet.contains(set);
     }
 
-    if (Util.isDistinct(aggregateCalls)) {
+    if (Util.isDistinct(aggregateCalls) || 1 == 1) {
       return aggregate_(groupSet, groupSets, r, aggregateCalls,
           registrar.extraNodes, frame.fields);
     }

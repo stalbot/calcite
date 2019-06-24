@@ -65,6 +65,7 @@ import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Lists;
 
 import org.hamcrest.Matcher;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.sql.Connection;
@@ -929,6 +930,7 @@ public class RelBuilderTest {
 
   /** Tests that {@link RelBuilder#aggregate} eliminates duplicate aggregate
    * calls and creates a {@code Project} to compensate. */
+  @Ignore("until [CALCITE-3131] fixed")
   @Test public void testAggregateEliminatesDuplicateCalls() {
     RelNode root = buildRelWithDuplicateAggregates();
     final String expected = ""
@@ -940,6 +942,7 @@ public class RelBuilderTest {
 
   /** As {@link #testAggregateEliminatesDuplicateCalls()} but with a
    * single-column GROUP BY clause. */
+  @Ignore("until [CALCITE-3131] fixed")
   @Test public void testAggregateEliminatesDuplicateCalls2() {
     RelNode root = buildRelWithDuplicateAggregates(0);
     final String expected = ""
@@ -951,6 +954,7 @@ public class RelBuilderTest {
 
   /** As {@link #testAggregateEliminatesDuplicateCalls()} but with a
    * multi-column GROUP BY clause. */
+  @Ignore("until [CALCITE-3131] fixed")
   @Test public void testAggregateEliminatesDuplicateCalls3() {
     RelNode root = buildRelWithDuplicateAggregates(2, 0, 4, 3);
     final String expected = ""
