@@ -130,8 +130,8 @@ public class BigQuerySqlDialect extends SqlDialect {
     case UNION:
       if (!((SqlSetOperator) call.getOperator()).isAll()) {
         SqlSyntax.BINARY.unparse(writer, UNION_DISTINCT, call, leftPrec, rightPrec);
+        break;
       }
-      break;
     case EXCEPT:
       if (!((SqlSetOperator) call.getOperator()).isAll()) {
         SqlSyntax.BINARY.unparse(writer, EXCEPT_DISTINCT, call, leftPrec, rightPrec);
