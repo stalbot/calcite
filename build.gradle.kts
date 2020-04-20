@@ -108,8 +108,8 @@ releaseArtifacts {
 releaseParams {
     tlp.set("Calcite")
     componentName.set("Apache Calcite")
-    releaseTag.set("rel/v$buildVersion")
-    rcTag.set(rc.map { "v$buildVersion-rc$it" })
+    releaseTag.set("$buildVersion")
+    rcTag.set(rc.map { "$buildVersion-rc$it" })
     sitePreviewEnabled.set(false)
     nexus {
         // https://github.com/marcphilipp/nexus-publish-plugin/issues/35
